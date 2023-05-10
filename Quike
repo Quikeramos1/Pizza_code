@@ -1,0 +1,64 @@
+#Propesta Quike
+
+#solicito entrada de personas y compruebo que sea un entero positivo.
+while True:
+    try:
+        personas = input("¿Cuántas personas vais a ser? ")
+        int(personas)
+        if int(personas) >=0:
+            break
+        else:
+            print("Debes introducir un número positivo con el teclado numérico.")
+        
+            
+    except ValueError:
+        print("Debes introducir un número positivo con el teclado numérico")
+        
+
+ipersonas = int(personas)
+    
+while True:
+    try:
+        pizzas = input("¿Cuántas pizzas vais a comprar? ")
+        int(pizzas)
+        if int(pizzas) >=0:
+            break
+        else:
+            raise ValueError("Debes introducir un número positivo con el teclado numérico.")
+               
+    except ValueError:
+        print("Debes introducir un número positivo con el teclado numérico")
+        
+ipizzas = int(pizzas)
+
+if ipersonas %2 == 0:
+    porciones = ipersonas
+    sobra = 0
+else:
+    porciones = ipersonas +1
+    sobra = ipizzas
+
+acomer = 1 * ipizzas
+if acomer == 1:
+    ppieza = "pieza"
+else:
+    ppieza = "piezas"
+
+if ipersonas > 1:
+    plural = "personas"
+else:
+    plural = "persona"
+        
+if ipizzas > 1:
+    pplural = "pizzas"
+else:
+    pplural = "pizza"
+
+if sobra == 1:
+    psobra = "porción"
+else:
+    psobra = "porciones"
+    
+
+print("{} {} con {} {} \nCada persona toma {} {} \nSobran {} {}".format(ipersonas, plural, ipizzas, pplural, acomer, ppieza, sobra, psobra)) 
+
